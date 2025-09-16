@@ -37,4 +37,18 @@ public class CalculatorControllerTest {
 
         verify(calc, times(1)).sumar(2,3);
     }
+
+    @Test
+    void divideEndpoint() throws Exception {
+        when(calc.dividir(8,2)).thenReturn(4);
+
+        mvc.perform(get("/api/calc/divide")
+                .param("a","8").param("b","2"))
+                .andExpect(status().isOk())
+                .andExpect(content().string("4"));
+        
+        System.out.println("Se realizó prueba 02 en CalculatorControllerTest");
+
+        verify(calc, times(1)).dividir(8,2);
+    }
 }
