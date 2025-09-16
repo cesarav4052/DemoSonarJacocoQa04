@@ -1,0 +1,40 @@
+package com.qa.demoSonarJacocoQa.controller;
+
+import static org.mockito.Mockito.times;
+import static org.mockito.Mockito.verify;
+import static org.mockito.Mockito.when;
+
+import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
+import org.springframework.boot.test.mock.mockito.MockBean;
+import org.springframework.test.web.servlet.MockMvc;
+
+import com.qa.demoSonarJacocoQA.controller.CalculatorController;
+import com.qa.demoSonarJacocoQA.service.CalculatorService;
+
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
+
+@WebMvcTest(CalculatorController.class)
+public class CalculatorControllerTest {
+    @Autowired
+    private MockMvc mvc;
+
+    @MockBean
+    private CalculatorService calc;
+
+    @Test
+    void addEndpoint() throws Exception {
+        when(calc.sumar(2,3)).thenReturn(5);
+
+        mvc.perform(get("/api/calc/add")
+                .param("a","2").param("b","3"))
+                .andExpect(status().isOk())
+                .andExpect(content().string("5"));
+        
+        System.out.println("Se realizó 1 prueba en CalculatorControllerTest");
+
+        verify(calc, times(1)).sumar(2,3);
+    }
+}
