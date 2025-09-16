@@ -1,4 +1,4 @@
-package com.qa.demoSonarJacocoQA.service;
+package com.qa.demosonarjacocoqa.service;
 
 import org.springframework.stereotype.Service;
 

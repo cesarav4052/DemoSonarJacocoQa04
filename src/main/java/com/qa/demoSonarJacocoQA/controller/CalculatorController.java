@@ -1,9 +1,9 @@
-package com.qa.demoSonarJacocoQA.controller;
+package com.qa.demosonarjacocoqa.controller;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import com.qa.demoSonarJacocoQA.service.CalculatorService;
+import com.qa.demosonarjacocoqa.service.CalculatorService;
 
 @RestController
 @RequestMapping("/api/calc")

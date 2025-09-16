@@ -10,8 +10,8 @@ import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.test.web.servlet.MockMvc;
 
-import com.qa.demoSonarJacocoQA.controller.CalculatorController;
-import com.qa.demoSonarJacocoQA.service.CalculatorService;
+import com.qa.demosonarjacocoqa.controller.CalculatorController;
+import com.qa.demosonarjacocoqa.service.CalculatorService;
 
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;

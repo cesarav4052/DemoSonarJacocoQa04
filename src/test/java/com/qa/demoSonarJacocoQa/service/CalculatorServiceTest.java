@@ -5,7 +5,7 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 
 import org.junit.jupiter.api.Test;
 
-import com.qa.demoSonarJacocoQA.service.CalculatorService;
+import com.qa.demosonarjacocoqa.service.CalculatorService;
 
 public class CalculatorServiceTest {
     private final CalculatorService service = new CalculatorService();
