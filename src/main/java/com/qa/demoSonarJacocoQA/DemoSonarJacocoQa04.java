@@ -1,5 +1,4 @@
 package com.qa.demosonarjacocoqa;
-//package com.qa.demoSonarJacocoQA;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
