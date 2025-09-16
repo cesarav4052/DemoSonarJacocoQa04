@@ -10,6 +10,7 @@ public class DemoSonarJacocoQa04 {
 	private static final Logger logger = LoggerFactory.getLogger(DemoSonarJacocoQa04.class);
 
 	public static void main(String[] args) {
+		//Comentario 01
 		logger.info("Ingresando a proyecto DemoSonarJacocoQa04");
 		SpringApplication.run(DemoSonarJacocoQa04.class, args);
 	}
